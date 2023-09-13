@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="{% static 'main/css/nucleo-icons.css' %}" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{% static 'main/css/material-dashboard.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'asset/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'asset/css/bootstrap.css' %}">
+</head>
+
+<body>
+    {% block content %} {% endblock content %}
+    <script src="{% static 'main/js/core/popper.min.js' %}"></script>
+    <script src="{% static 'main/js/core/bootstrap.min.js' %}"></script>
+    <script src="{% static 'main//plugins/perfect-scrollbar.min.js' %}"></script>
+    <script src="{% static 'main/js/plugins/smooth-scrollbar.min.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.js' %}"></script>
+    <script src="{% static 'main/js/jquery.min.js' %}"></script>
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="{% static 'main/js/material-dashboard.min.js' %}"></script>
+    <script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'main/js/jquery.min.js' %}"></script>
+</body>
+
+</html>
